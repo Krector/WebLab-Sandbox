@@ -18,8 +18,7 @@ var getTextStrings = function (stringList, inputLength) {
 		for ( var index in stringList){
 		  
 			if (typeof stringList[index] == 'string') {
-				document.write (typeof stringList[index] + " ")
-		  		if (stringList[index].length >= inputLength) {  //Length qualifies
+		  		if (stringList[index].length > inputLength) {  //Length qualifies
 					outputList[listIndex] = stringList[index];
 					listIndex ++;
 		  		}
