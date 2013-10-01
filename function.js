@@ -1,4 +1,6 @@
 document.write('<h4>Word Count Example</h4>');
+
+var count = 4;
 // asynchronous example
 var asyncFunction = function(callback) {
   // do something that is not available immediately
@@ -13,3 +15,4 @@ var callback = function(message) {
 asyncFunction (callback);
 
 document.write('test1' + 'after invoke');
+document.write ('Test' + count.toString())
