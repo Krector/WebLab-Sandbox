@@ -9,7 +9,7 @@
 <h1>Get Strings of Specified Length From An Array</h1>
 
 <script>
-var getTextStrings = function (stringList, inputLength) {
+var filterArrayOfStrings = function (stringList, inputLength) {
 	
 	var outputList = [""];
 	var listIndex = 0;
@@ -17,28 +17,28 @@ var getTextStrings = function (stringList, inputLength) {
 	if (stringList != null) {
 		for ( var index in stringList){
 		  
-			if (typeof stringList[index] == 'string') {
+			if (typeof stringList[index] == "string") {
 		  		if (stringList[index].length > inputLength) {  //Length qualifies
 					outputList[listIndex] = stringList[index];
 					listIndex ++;
 		  		}
 			}
 			else {
-				document.write ('Element at position ' + index + ' is not a string.');
+                document.write ("Element at position " + index.toString() + "is not a string.")
 			}
 		}
 	}
 	else { //stringList is empty
   
-	 	document.write ('Input string list is empty');
+	 	document.write ("Input string list is empty");
 	}
   return outputList;
 
-} // End getTextStrings
+} // End filterArrayOfStrings
 
-var myStrings =['123', 'Now Is The Time', 22, '4', 'five '];
+var myStrings =["123", "Now Is The Time", "22", "4", "five" ];
 
-document.write (getTextStrings (myStrings, 5));
+document.write ("<p>The strings of :</p><p>" + myStrings + "</P> longer than the input length of 5  are : <p>" + filterArrayOfStrings (myStrings, 5) + "</p>");
 
 
 </script>
